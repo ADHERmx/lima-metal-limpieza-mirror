@@ -1,5 +1,5 @@
 import heroImage from "@/assets/hero-goff.jpg";
-import limaLogo from "@/assets/lima-logo.png";
+import limaLogoWhite from "@/assets/lima-logo-white.png";
 
 const Hero = () => {
   return (
@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
           <img 
-            src={limaLogo} 
+            src={limaLogoWhite} 
             alt="LIMA - Limpieza de Metales" 
             className="h-24 md:h-32 w-auto mb-8"
           />
