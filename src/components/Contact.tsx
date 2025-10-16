@@ -72,10 +72,10 @@ const Contact = () => {
                       Teléfono
                     </p>
                     <p className="font-body text-muted-foreground">
-                      (81) 8351-0648
+                      +52 (81) 8351-0648
                     </p>
                     <p className="font-body text-muted-foreground">
-                      (81) 8351-4881
+                      +52 (81) 8351-4881
                     </p>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ const Contact = () => {
                       WhatsApp
                     </p>
                     <p className="font-body text-muted-foreground">
-                      (81) 1910-3216
+                      +52 (81) 1910-3216
                     </p>
                   </div>
                 </div>
@@ -110,17 +110,6 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="p-6 bg-industrial-dark text-primary-foreground rounded-lg">
-              <h4 className="font-heading text-xl font-semibold mb-3">
-                Horario de Atención
-              </h4>
-              <p className="font-body text-primary-foreground/80">
-                Lunes a Viernes: 8:00 AM - 6:00 PM
-              </p>
-              <p className="font-body text-primary-foreground/80">
-                Sábado: 9:00 AM - 2:00 PM
-              </p>
-            </div>
           </div>
 
           <div className="bg-card p-8 rounded-lg border border-border">

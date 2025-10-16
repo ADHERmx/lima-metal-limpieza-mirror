@@ -80,7 +80,7 @@ const Services = () => {
         <div className="mt-24">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Photo Gallery of Equipment manufactured by LIMA (1983-2008)
+              Galería de Equipos Manufacturados por LIMA (1983-2008)
             </h2>
             <div className="h-1 w-24 bg-accent mx-auto" />
           </div>
