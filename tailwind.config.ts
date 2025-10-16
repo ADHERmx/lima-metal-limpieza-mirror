@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        'heading': ['Rajdhani', 'sans-serif'],
-        'body': ['Inter', 'sans-serif'],
+        'heading': ['Avenir', 'Avenir Next', 'system-ui', 'sans-serif'],
+        'body': ['Avenir', 'Avenir Next', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
