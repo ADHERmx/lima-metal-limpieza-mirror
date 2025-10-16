@@ -72,7 +72,24 @@ const Contact = () => {
                       Teléfono
                     </p>
                     <p className="font-body text-muted-foreground">
-                      +52 (33) 1234-5678
+                      (81) 8351-0648
+                    </p>
+                    <p className="font-body text-muted-foreground">
+                      (81) 8351-4881
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-accent" />
+                  </div>
+                  <div>
+                    <p className="font-heading font-semibold text-foreground mb-1">
+                      WhatsApp
+                    </p>
+                    <p className="font-body text-muted-foreground">
+                      (81) 1910-3216
                     </p>
                   </div>
                 </div>
@@ -86,7 +103,7 @@ const Contact = () => {
                       Ubicación
                     </p>
                     <p className="font-body text-muted-foreground">
-                      Guadalajara, Jalisco, México
+                      Monterrey, NL, 64410
                     </p>
                   </div>
                 </div>
