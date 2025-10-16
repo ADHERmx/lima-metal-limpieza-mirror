@@ -1,4 +1,5 @@
 import heroImage from "@/assets/hero-goff.jpg";
+import limaLogo from "@/assets/lima-logo.png";
 
 const Hero = () => {
   return (
@@ -12,9 +13,11 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
-          <h1 className="font-heading text-5xl md:text-7xl font-bold text-primary-foreground mb-6 tracking-tight">
-            LIMA
-          </h1>
+          <img 
+            src={limaLogo} 
+            alt="LIMA - Limpieza de Metales" 
+            className="h-24 md:h-32 w-auto mb-8"
+          />
           <div className="h-1 w-24 bg-accent mb-6" />
           <p className="font-body text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
             Dedicados a servir la industria metal mecánica y fundición desde 1981

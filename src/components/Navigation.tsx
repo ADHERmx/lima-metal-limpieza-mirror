@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import limaLogo from "@/assets/lima-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,9 +18,12 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <div className="font-heading text-2xl font-bold tracking-tight">
-            <span className="text-foreground">LIMA</span>
-            <span className="text-accent ml-2">•</span>
+          <div className="flex items-center">
+            <img 
+              src={limaLogo} 
+              alt="LIMA - Limpieza de Metales" 
+              className="h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
