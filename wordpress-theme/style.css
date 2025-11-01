@@ -1,0 +1,321 @@
+/*
+Theme Name: LIMA - Limpieza de Metales
+Theme URI: https://lima.com
+Author: LIMA
+Author URI: https://lima.com
+Description: One-page industrial theme for LIMA metal cleaning services
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: lima
+Tags: one-page, industrial, business, custom-logo, responsive
+*/
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --industrial-dark: #1a1a1a;
+  --industrial-gray: #6b7280;
+  --industrial-light-gray: #e5e7eb;
+  --industrial-orange: #ff8533;
+  --text-white: #fafafa;
+  --background: #f9fafb;
+}
+
+body {
+  font-family: 'Avenir', 'Avenir Next', system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--industrial-dark);
+  background: var(--background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Avenir', 'Avenir Next', system-ui, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navigation */
+.site-header {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.site-logo img {
+  height: 48px;
+  width: auto;
+}
+
+.main-navigation ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.main-navigation a {
+  color: var(--industrial-dark);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.main-navigation a:hover {
+  color: var(--industrial-orange);
+}
+
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.7));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 768px;
+}
+
+.hero-logo {
+  height: 8rem;
+  width: auto;
+  margin-bottom: 2rem;
+}
+
+.hero-accent {
+  height: 4px;
+  width: 6rem;
+  background: var(--industrial-orange);
+  margin-bottom: 1.5rem;
+}
+
+.hero-text {
+  font-size: 1.5rem;
+  color: var(--text-white);
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  line-height: 1.75;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  padding: 1rem 2rem;
+  background: var(--industrial-orange);
+  color: var(--industrial-dark);
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  padding: 1rem 2rem;
+  border: 2px solid var(--text-white);
+  color: var(--text-white);
+  font-weight: 600;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background: var(--text-white);
+  color: var(--industrial-dark);
+}
+
+/* About Section */
+.about-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--industrial-dark);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: var(--industrial-gray);
+  font-size: 1.125rem;
+}
+
+.timeline {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.milestone {
+  background: white;
+  border: 1px solid var(--industrial-light-gray);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.25rem;
+}
+
+.milestone-year {
+  color: var(--industrial-orange);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.milestone-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Services Section */
+.services-section {
+  padding: 5rem 0;
+  background: var(--background);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.service-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--industrial-orange);
+  margin-bottom: 1rem;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 3rem auto 0;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--industrial-light-gray);
+  border-radius: 0.25rem;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--industrial-dark);
+  color: var(--text-white);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-navigation {
+    display: none;
+  }
+
+  .hero-logo {
+    height: 6rem;
+  }
+
+  .hero-text {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
