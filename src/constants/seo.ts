@@ -29,7 +29,8 @@ export const DEFAULT_SEO: PageMetadata = {
     "Monterrey",
     "México",
   ],
-  image: "/lima-logo.png", // Will be converted to absolute URL
+  // Temporary social preview image placeholder (replace with /og-image.jpg when available)
+  image: "https://storage.googleapis.com/gpt-engineer-file-uploads/N5gAM4D3SIOmmhwQDjFqXxAsqkl2/social-images/social-1760630917858-LIMA color.png",
 };
 
 export const PAGE_METADATA: Record<string, PageMetadata> = {

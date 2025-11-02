@@ -29,10 +29,12 @@ const Index = () => {
         structuredData={[localBusinessSchema, breadcrumbSchema]}
       />
       <Navigation />
-      <Hero />
-      <About />
-      <Services />
-      <Contact />
+      <main id="main" role="main">
+        <Hero />
+        <About />
+        <Services />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );
