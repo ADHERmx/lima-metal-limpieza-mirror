@@ -1,14 +1,25 @@
+# robots.txt for LIMA - Limpieza de Metales
+# https://www.lima.com.mx
+
+# Sitemap
+Sitemap: https://www.lima.com.mx/sitemap.xml
+
+# Google
 User-agent: Googlebot
 Allow: /
 
+# Bing
 User-agent: Bingbot
 Allow: /
 
+# Twitter
 User-agent: Twitterbot
 Allow: /
 
+# Facebook
 User-agent: facebookexternalhit
 Allow: /
 
+# All other bots
 User-agent: *
 Allow: /
