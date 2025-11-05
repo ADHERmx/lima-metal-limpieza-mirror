@@ -198,7 +198,7 @@ export function generateBreadcrumbSchema(
  * @param schema - Schema object (Organization, LocalBusiness, BreadcrumbList, etc.)
  * @returns JSON string for script tag
  */
-export function schemaToJsonLd(schema: Record<string, unknown>): string {
+export function schemaToJsonLd(schema: OrganizationSchema | LocalBusinessSchema | BreadcrumbSchema | Record<string, unknown>): string {
   return JSON.stringify(schema, null, 0); // Compact JSON for production
 }
 
