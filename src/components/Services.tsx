@@ -12,8 +12,8 @@ import imagen10 from "@/assets/gallery/imagen-10.jpg";
 const Services = () => {
   const services = [{
     icon: Wrench,
-    title: "Equipos de Granallado",
-    description: "Granalladoras y equipos de sand blasteo de última generación"
+    title: "Equipos de Granallado GOFF",
+    description: "Granalladoras y equipos de san blasteo de última generación (www.goff-inc.com)"
   }, {
     icon: Package,
     title: "Equipos Vibratorios",
@@ -26,7 +26,7 @@ const Services = () => {
   return <section id="servicios" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">Equipos de Granallado GOFF</h2>
+          <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">Nuestros Productos</h2>
           <div className="h-1 w-24 bg-accent mx-auto mb-6" />
           <p className="font-body text-lg text-muted-foreground">
             Soluciones integrales para la industria metal mecánica y fundición
