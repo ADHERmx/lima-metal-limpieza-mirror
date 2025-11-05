@@ -21,7 +21,7 @@ const About = () => {
       year: "Presente",
       title: "Distribución Exclusiva",
       description:
-        "Distribución exclusiva de granalladoras GOFF desde 1981. Distribución exclusiva en industria de fundición de equipos vibratorios CARRIER.",
+        "Distribución de equipos e insumos para la industria de fundición y metal mecánica en México.",
       icon: Award,
     },
   ];
