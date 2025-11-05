@@ -7,7 +7,7 @@ const About = () => {
       year: "1981",
       title: "Fundación",
       description:
-        "LIMA es fundada por Adrián Hermosillo en asociación con BCP y GOFF. LIMA toma la representación de CARRIER para la industria de fundición.",
+        "LIMA es fundada en Monterrey en asociación con GOFF y BCP, para satisfacer la creciente demanda de granallado (shot blast) en el país.",
       icon: Factory,
     },
     {
