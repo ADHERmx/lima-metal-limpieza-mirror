@@ -58,7 +58,7 @@ const Contact = () => {
                       Email
                     </p>
                     <p className="font-body text-muted-foreground">
-                      info@lima.com.mx
+                      ventas@limpiezademetales.com.mx
                     </p>
                   </div>
                 </div>

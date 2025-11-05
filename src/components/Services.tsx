@@ -16,12 +16,12 @@ const Services = () => {
     description: "Granalladoras y equipos de san blasteo de última generación (www.goff-inc.com)"
   }, {
     icon: Package,
-    title: "Equipos Vibratorios",
-    description: "Transportadores, alimentadores y shakeouts CARRIER"
+    title: "Equipos Vibratorios Carrier",
+    description: "Transportadores de alimentadores y shakeouts CARRIER (www.carrier-vibrating.com)"
   }, {
     icon: Layers,
-    title: "Distribución GOFF",
-    description: "Representante exclusivo de granalladoras GOFF desde 1981"
+    title: "Otros",
+    description: "Refacciones, insumos y servicio técnico para nuestras líneas de equipos"
   }];
   return <section id="servicios" className="py-24 bg-background">
       <div className="container mx-auto px-4">
