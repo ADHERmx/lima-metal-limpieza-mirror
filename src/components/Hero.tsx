@@ -10,7 +10,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
-          <img src={limaLogoWhite} alt="LIMA - Limpieza de Metales" className="h-32 md:h-40 w-auto mb-8 " />
+          <img src={limaLogoWhite} alt="LIMA - Limpieza de Metales" className="h-40 md:h-40 w-auto mb-8 " />
           <h1 className="sr-only">LIMA - Limpieza de Metales | Industria Metal Mecánica desde 1981</h1>
           <div className="h-1 w-24 bg-accent mb-6" />
           <p className="font-body text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
