@@ -1,4 +1,4 @@
-import { Wrench, Zap, Package, Layers } from "lucide-react";
+import { Wrench, Package, Layers } from "lucide-react";
 import imagen1 from "@/assets/gallery/imagen-1.jpg";
 import imagen2 from "@/assets/gallery/imagen-2.jpg";
 import imagen3 from "@/assets/gallery/imagen-3.jpg";
@@ -14,10 +14,6 @@ const Services = () => {
     icon: Wrench,
     title: "Equipos de Granallado",
     description: "Granalladoras y equipos de sand blasteo de última generación"
-  }, {
-    icon: Zap,
-    title: "Colectores de Polvo",
-    description: "Sistemas de recolección y filtración industrial"
   }, {
     icon: Package,
     title: "Equipos Vibratorios",
@@ -37,7 +33,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => <div key={index} className="group p-8 bg-card border border-border hover:border-accent transition-all duration-300 hover:shadow-lg">
               <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
                 <service.icon className="w-8 h-8 text-accent" />
