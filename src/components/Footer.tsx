@@ -1,6 +1,5 @@
 const Footer = () => {
-  return (
-    <footer className="bg-industrial-dark text-primary-foreground py-12">
+  return <footer className="bg-industrial-dark text-primary-foreground py-12">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           <div>
@@ -11,35 +10,26 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-heading text-lg font-semibold mb-4">Enlaces</h4>
+            <h4 className="font-heading text-lg font-semibold mb-4">Secciones</h4>
             <ul className="space-y-2 font-body text-sm">
               <li>
-                <button
-                  onClick={() =>
-                    document.getElementById("nosotros")?.scrollIntoView({ behavior: "smooth" })
-                  }
-                  className="text-primary-foreground/70 hover:text-accent transition-colors"
-                >
+                <button onClick={() => document.getElementById("nosotros")?.scrollIntoView({
+                behavior: "smooth"
+              })} className="text-primary-foreground/70 hover:text-accent transition-colors">
                   Nosotros
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() =>
-                    document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })
-                  }
-                  className="text-primary-foreground/70 hover:text-accent transition-colors"
-                >
+                <button onClick={() => document.getElementById("servicios")?.scrollIntoView({
+                behavior: "smooth"
+              })} className="text-primary-foreground/70 hover:text-accent transition-colors">
                   Servicios
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() =>
-                    document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })
-                  }
-                  className="text-primary-foreground/70 hover:text-accent transition-colors"
-                >
+                <button onClick={() => document.getElementById("contacto")?.scrollIntoView({
+                behavior: "smooth"
+              })} className="text-primary-foreground/70 hover:text-accent transition-colors">
                   Contacto
                 </button>
               </li>
@@ -55,8 +45,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
