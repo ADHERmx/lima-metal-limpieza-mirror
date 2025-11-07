@@ -1,5 +1,7 @@
-import { Wrench, Package, Layers } from "lucide-react";
+import { Layers } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import carrierLogo from "@/assets/carrier-logo.png";
+import goffLogo from "@/assets/goff-logo.png";
 import imagen1 from "@/assets/gallery/imagen-1.jpg";
 import imagen2 from "@/assets/gallery/imagen-2.jpg";
 import imagen3 from "@/assets/gallery/imagen-3.jpg";
@@ -13,12 +15,13 @@ import imagen10 from "@/assets/gallery/imagen-10.jpg";
 
 const Services = () => {
   const { ref, isVisible } = useScrollAnimation();
+  
   const services = [{
-    icon: Wrench,
+    logo: goffLogo,
     title: "Equipos de Granallado GOFF",
     description: <>Granalladoras y equipos de san blasteo de última generación <a href="https://www.goff-inc.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">GOFF</a></>
   }, {
-    icon: Package,
+    logo: carrierLogo,
     title: "Equipos Vibratorios Carrier",
     description: <>Transportadores de alimentadores y shakeouts <a href="https://www.carrier-vibrating.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">CARRIER</a></>
   }, {
@@ -44,8 +47,12 @@ const Services = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => <div key={index} className="group p-8 bg-card border border-border hover:border-accent transition-all duration-300 hover:shadow-lg">
-              <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-                <service.icon className="w-8 h-8 text-accent" />
+              <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors overflow-hidden">
+                {service.logo ? (
+                  <img src={service.logo} alt={service.title} className="w-full h-full object-contain p-2" />
+                ) : (
+                  <service.icon className="w-8 h-8 text-accent" />
+                )}
               </div>
               <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
                 {service.title}
