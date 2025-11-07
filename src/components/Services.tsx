@@ -1,4 +1,5 @@
 import { Wrench, Package, Layers } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import imagen1 from "@/assets/gallery/imagen-1.jpg";
 import imagen2 from "@/assets/gallery/imagen-2.jpg";
 import imagen3 from "@/assets/gallery/imagen-3.jpg";
@@ -9,7 +10,9 @@ import imagen7 from "@/assets/gallery/imagen-7.jpg";
 import imagen8 from "@/assets/gallery/imagen-8.jpg";
 import imagen9 from "@/assets/gallery/imagen-9.jpg";
 import imagen10 from "@/assets/gallery/imagen-10.jpg";
+
 const Services = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const services = [{
     icon: Wrench,
     title: "Equipos de Granallado GOFF",
@@ -23,7 +26,13 @@ const Services = () => {
     title: "Otros",
     description: "Refacciones, insumos y servicio técnico para nuestras líneas de equipos"
   }];
-  return <section id="servicios" className="py-24 bg-background">
+  return <section 
+      ref={ref}
+      id="servicios" 
+      className={`py-24 bg-background transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">Nuestros Productos</h2>
