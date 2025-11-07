@@ -13,11 +13,11 @@ const Services = () => {
   const services = [{
     icon: Wrench,
     title: "Equipos de Granallado GOFF",
-    description: "Granalladoras y equipos de san blasteo de última generación (www.goff-inc.com)"
+    description: <>Granalladoras y equipos de san blasteo de última generación <a href="https://www.goff-inc.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">GOFF</a></>
   }, {
     icon: Package,
     title: "Equipos Vibratorios Carrier",
-    description: "Transportadores de alimentadores y shakeouts CARRIER (www.carrier-vibrating.com)"
+    description: <>Transportadores de alimentadores y shakeouts <a href="https://www.carrier-vibrating.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">CARRIER</a></>
   }, {
     icon: Layers,
     title: "Otros",
@@ -41,9 +41,9 @@ const Services = () => {
               <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
                 {service.title}
               </h3>
-              <p className="font-body text-muted-foreground">
+              <div className="font-body text-muted-foreground">
                 {service.description}
-              </p>
+              </div>
             </div>)}
         </div>
 
