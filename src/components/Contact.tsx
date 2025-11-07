@@ -57,9 +57,12 @@ const Contact = () => {
                     <p className="font-heading font-semibold text-foreground mb-1">
                       Email
                     </p>
-                    <p className="font-body text-muted-foreground">
+                    <a 
+                      href="mailto:ventas@limpiezademetales.com.mx" 
+                      className="font-body text-muted-foreground hover:text-accent transition-colors"
+                    >
                       ventas@limpiezademetales.com.mx
-                    </p>
+                    </a>
                   </div>
                 </div>
 
@@ -157,7 +160,7 @@ const Contact = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   className="font-body"
-                  placeholder="(33) 1234-5678"
+                  placeholder="+52 (81) 1234-5678"
                 />
               </div>
 
