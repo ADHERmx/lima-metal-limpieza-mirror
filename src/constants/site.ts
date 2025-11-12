@@ -90,8 +90,8 @@ transportadores vibratorios, alimentadores y shakeouts.`,
   ],
 
   urls: {
-    // Production URL - update before deployment
-    production: "https://www.lima.com.mx",
+    // Production URL
+    production: "https://limpiezademetales.com.mx",
     // Lovable project URL
     development: "https://lovable.dev/projects/eabf5d60-e2cf-4ebd-b861-aab2ffcd1931",
   },

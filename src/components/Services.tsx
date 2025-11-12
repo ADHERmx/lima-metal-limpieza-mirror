@@ -1,14 +1,18 @@
 import { Wrench, Zap, Package, Layers } from "lucide-react";
-import imagen1 from "@/assets/gallery/imagen-1.jpg";
-import imagen2 from "@/assets/gallery/imagen-2.jpg";
-import imagen3 from "@/assets/gallery/imagen-3.jpg";
-import imagen4 from "@/assets/gallery/imagen-4.jpg";
-import imagen5 from "@/assets/gallery/imagen-5.jpg";
-import imagen6 from "@/assets/gallery/imagen-6.jpg";
-import imagen7 from "@/assets/gallery/imagen-7.jpg";
-import imagen8 from "@/assets/gallery/imagen-8.jpg";
-import imagen9 from "@/assets/gallery/imagen-9.jpg";
-import imagen10 from "@/assets/gallery/imagen-10.jpg";
+
+// Import optimized images (WebP with JPEG fallback)
+const galleryImages = [
+  { webp: new URL("@/assets/gallery/imagen-1.webp", import.meta.url).href, jpg: new URL("@/assets/gallery/imagen-1-optimized.jpg", import.meta.url).href },
+  { webp: new URL("@/assets/gallery/imagen-2.webp", import.meta.url).href, jpg: new URL("@/assets/gallery/imagen-2-optimized.jpg", import.meta.url).href },
+  { webp: new URL("@/assets/gallery/imagen-3.webp", import.meta.url).href, jpg: new URL("@/assets/gallery/imagen-3-optimized.jpg", import.meta.url).href },
+  { webp: new URL("@/assets/gallery/imagen-4.webp", import.meta.url).href, jpg: new URL("@/assets/gallery/imagen-4-optimized.jpg", import.meta.url).href },
+  { webp: new URL("@/assets/gallery/imagen-5.webp", import.meta.url).href, jpg: new URL("@/assets/gallery/imagen-5-optimized.jpg", import.meta.url).href },
+  { webp: new URL("@/assets/gallery/imagen-6.webp", import.meta.url).href, jpg: new URL("@/assets/gallery/imagen-6-optimized.jpg", import.meta.url).href },
+  { webp: new URL("@/assets/gallery/imagen-7.webp", import.meta.url).href, jpg: new URL("@/assets/gallery/imagen-7-optimized.jpg", import.meta.url).href },
+  { webp: new URL("@/assets/gallery/imagen-8.webp", import.meta.url).href, jpg: new URL("@/assets/gallery/imagen-8-optimized.jpg", import.meta.url).href },
+  { webp: new URL("@/assets/gallery/imagen-9.webp", import.meta.url).href, jpg: new URL("@/assets/gallery/imagen-9-optimized.jpg", import.meta.url).href },
+  { webp: new URL("@/assets/gallery/imagen-10.webp", import.meta.url).href, jpg: new URL("@/assets/gallery/imagen-10-optimized.jpg", import.meta.url).href },
+];
 
 const Services = () => {
   const services = [
@@ -86,16 +90,22 @@ const Services = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9, imagen10].map((image, index) => (
+            {galleryImages.map((image, index) => (
               <div
                 key={index}
                 className="group relative overflow-hidden bg-card border border-border hover:border-accent transition-all duration-300 hover:shadow-xl aspect-[4/3]"
               >
-                <img
-                  src={image}
-                  alt={`Equipo LIMA ${index + 1} - Maquinaria industrial manufacturada entre 1983-2008`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+                <picture>
+                  <source srcSet={image.webp} type="image/webp" />
+                  <img
+                    src={image.jpg}
+                    alt={`Equipo LIMA ${index + 1} - Maquinaria industrial manufacturada entre 1983-2008`}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                    width="800"
+                    height="600"
+                  />
+                </picture>
                 <div className="absolute inset-0 bg-gradient-to-t from-industrial-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             ))}

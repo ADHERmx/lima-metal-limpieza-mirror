@@ -160,12 +160,12 @@ export function generateLocalBusinessSchema(): LocalBusinessSchema {
       postalCode: SITE_INFO.location.postalCode,
       addressCountry: SITE_INFO.location.countryCode,
     },
-    // Add geo coordinates when available
-    // geo: {
-    //   "@type": "GeoCoordinates",
-    //   latitude: 25.6866,
-    //   longitude: -100.3161,
-    // },
+    // Geo-coordinates for Monterrey, Nuevo León
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 25.6866,
+      longitude: -100.3161,
+    },
     ...(sameAs.length > 0 && { sameAs }),
   };
 }

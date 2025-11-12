@@ -29,8 +29,8 @@ export const DEFAULT_SEO: PageMetadata = {
     "Monterrey",
     "México",
   ],
-  // Temporary social preview image placeholder (replace with /og-image.jpg when available)
-  image: "https://storage.googleapis.com/gpt-engineer-file-uploads/N5gAM4D3SIOmmhwQDjFqXxAsqkl2/social-images/social-1760630917858-LIMA color.png",
+  // Social preview image
+  image: "/og-image.jpg",
 };
 
 export const PAGE_METADATA: Record<string, PageMetadata> = {
@@ -50,7 +50,7 @@ export const PAGE_METADATA: Record<string, PageMetadata> = {
       "shakeouts",
       "transportadores vibratorios",
     ],
-    image: "/lima-logo.png",
+    image: "/og-image.jpg",
   },
 
   notFound: {
@@ -65,8 +65,8 @@ export const PAGE_METADATA: Record<string, PageMetadata> = {
 export const GEO_META = {
   "geo.region": SITE_INFO.location.region, // MX-NLE
   "geo.placename": SITE_INFO.location.city, // Monterrey
-  "geo.position": "", // Add coordinates when available: "25.6866;-100.3161"
-  ICBM: "", // Add coordinates when available: "25.6866, -100.3161"
+  "geo.position": "25.6866;-100.3161", // Monterrey coordinates
+  ICBM: "25.6866, -100.3161", // Monterrey coordinates (ICBM format)
 };
 
 // Theme color for browser UI

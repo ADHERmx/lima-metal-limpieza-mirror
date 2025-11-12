@@ -1,8 +1,8 @@
 # robots.txt for LIMA - Limpieza de Metales
-# https://www.lima.com.mx
+# https://limpiezademetales.com.mx
 
 # Sitemap
-Sitemap: https://www.lima.com.mx/sitemap.xml
+Sitemap: https://limpiezademetales.com.mx/sitemap.xml
 
 # Google
 User-agent: Googlebot
