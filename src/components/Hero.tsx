@@ -6,6 +6,7 @@ import limaLogoWhitePNG from "@/assets/lima-logo-white-optimized.png";
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* SEO-optimized hero background with WebP + JPEG fallback */}
       <picture className="absolute inset-0">
         <source srcSet={heroImageWebP} type="image/webp" />
         <img
@@ -20,12 +21,13 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
+          {/* SEO-optimized logo with WebP + PNG fallback, larger size from server design */}
           <picture>
             <source srcSet={limaLogoWhiteWebP} type="image/webp" />
             <img
               src={limaLogoWhitePNG}
               alt="LIMA - Limpieza de Metales"
-              className="h-24 md:h-32 w-auto mb-8"
+              className="h-48 md:h-64 lg:h-72 w-auto mb-4 drop-shadow-2xl animate-fade-in"
               width="240"
               height="96"
             />

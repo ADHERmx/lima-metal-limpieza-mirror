@@ -1,6 +1,11 @@
-import { Wrench, Zap, Package, Layers } from "lucide-react";
+import { Layers } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import carrierLogoWebP from "@/assets/carrier-logo.webp";
+import carrierLogoPNG from "@/assets/carrier-logo.png";
+import goffLogoWebP from "@/assets/goff-logo.webp";
+import goffLogoPNG from "@/assets/goff-logo.png";
 
-// Import optimized images (WebP with JPEG fallback)
+// Import optimized gallery images (WebP with JPEG fallback)
 const galleryImages = [
   { webp: new URL("@/assets/gallery/imagen-1.webp", import.meta.url).href, jpg: new URL("@/assets/gallery/imagen-1-optimized.jpg", import.meta.url).href },
   { webp: new URL("@/assets/gallery/imagen-2.webp", import.meta.url).href, jpg: new URL("@/assets/gallery/imagen-2-optimized.jpg", import.meta.url).href },
@@ -15,35 +20,64 @@ const galleryImages = [
 ];
 
 const Services = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   const services = [
     {
-      icon: Wrench,
-      title: "Equipos de Granallado",
-      description: "Granalladoras y equipos de sand blasteo de última generación",
+      logoWebP: goffLogoWebP,
+      logoPNG: goffLogoPNG,
+      title: "Equipos de Granallado GOFF",
+      description: (
+        <>
+          Granalladoras y equipos de sand blasteo de última generación{" "}
+          <a
+            href="https://www.goff-inc.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent hover:underline"
+          >
+            GOFF
+          </a>
+        </>
+      ),
     },
     {
-      icon: Zap,
-      title: "Colectores de Polvo",
-      description: "Sistemas de recolección y filtración industrial",
-    },
-    {
-      icon: Package,
-      title: "Equipos Vibratorios",
-      description: "Transportadores, alimentadores y shakeouts CARRIER",
+      logoWebP: carrierLogoWebP,
+      logoPNG: carrierLogoPNG,
+      title: "Equipos Vibratorios Carrier",
+      description: (
+        <>
+          Transportadores de alimentadores y shakeouts{" "}
+          <a
+            href="https://www.carrier-vibrating.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent hover:underline"
+          >
+            CARRIER
+          </a>
+        </>
+      ),
     },
     {
       icon: Layers,
-      title: "Distribución GOFF",
-      description: "Representante exclusivo de granalladoras GOFF desde 1981",
+      title: "Otros",
+      description: "Refacciones, insumos y servicio técnico para nuestras líneas de equipos",
     },
   ];
 
   return (
-    <section id="servicios" className="py-24 bg-background">
+    <section
+      ref={ref}
+      id="servicios"
+      className={`py-24 bg-background transition-all duration-1000 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Nuestros Servicios
+            Nuestros Productos
           </h2>
           <div className="h-1 w-24 bg-accent mx-auto mb-6" />
           <p className="font-body text-lg text-muted-foreground">
@@ -51,21 +85,30 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
               className="group p-8 bg-card border border-border hover:border-accent transition-all duration-300 hover:shadow-lg"
             >
-              <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors">
-                <service.icon className="w-8 h-8 text-accent" />
+              <div className="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors overflow-hidden">
+                {service.logoWebP ? (
+                  <picture>
+                    <source srcSet={service.logoWebP} type="image/webp" />
+                    <img
+                      src={service.logoPNG}
+                      alt={service.title}
+                      className="w-full h-full object-contain p-2"
+                    />
+                  </picture>
+                ) : (
+                  <service.icon className="w-8 h-8 text-accent" />
+                )}
               </div>
               <h3 className="font-heading text-xl font-semibold text-foreground mb-3">
                 {service.title}
               </h3>
-              <p className="font-body text-muted-foreground">
-                {service.description}
-              </p>
+              <div className="font-body text-muted-foreground">{service.description}</div>
             </div>
           ))}
         </div>
@@ -95,6 +138,7 @@ const Services = () => {
                 key={index}
                 className="group relative overflow-hidden bg-card border border-border hover:border-accent transition-all duration-300 hover:shadow-xl aspect-[4/3]"
               >
+                {/* SEO-optimized gallery images with WebP + JPEG fallback and lazy loading */}
                 <picture>
                   <source srcSet={image.webp} type="image/webp" />
                   <img

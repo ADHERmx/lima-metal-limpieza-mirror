@@ -1,13 +1,15 @@
 import { Factory, TrendingUp, Award } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const About = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const milestones = [
     {
       year: "1981",
       title: "Fundación",
       description:
-        "LIMA es fundada por Adrián Hermosillo en asociación con BCP y GOFF. LIMA toma la representación de CARRIER para la industria de fundición.",
+        "LIMA es fundada en Monterrey en asociación con GOFF y BCP, para satisfacer la creciente demanda de granallado (shot blast) en el país.",
       icon: Factory,
     },
     {
@@ -21,13 +23,19 @@ const About = () => {
       year: "Presente",
       title: "Distribución Exclusiva",
       description:
-        "Distribución exclusiva de granalladoras GOFF desde 1981. Distribución exclusiva en industria de fundición de equipos vibratorios CARRIER.",
+        "Distribución de equipos e insumos para la industria de fundición y metal mecánica en México.",
       icon: Award,
     },
   ];
 
   return (
-    <section id="nosotros" className="py-24 bg-industrial-light-gray">
+    <section 
+      ref={ref}
+      id="nosotros" 
+      className={`py-24 bg-industrial-light-gray transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">

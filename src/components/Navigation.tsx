@@ -25,12 +25,12 @@ const Navigation = () => {
       </a>
 
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24 md:h-28">
           <div className="flex items-center">
             <img 
               src={limaLogo} 
               alt="LIMA - Limpieza de Metales" 
-              className="h-12 w-auto"
+              className="h-16 md:h-20 w-auto"
             />
           </div>
 

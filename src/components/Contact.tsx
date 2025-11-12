@@ -4,8 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Contact = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -30,7 +32,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contacto" className="py-24 bg-industrial-light-gray">
+    <section 
+      ref={ref}
+      id="contacto" 
+      className={`py-24 bg-industrial-light-gray transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -57,9 +65,12 @@ const Contact = () => {
                     <p className="font-heading font-semibold text-foreground mb-1">
                       Email
                     </p>
-                    <p className="font-body text-muted-foreground">
-                      info@lima.com.mx
-                    </p>
+                    <a 
+                      href="mailto:ventas@limpiezademetales.com.mx" 
+                      className="font-body text-muted-foreground hover:text-accent transition-colors"
+                    >
+                      ventas@limpiezademetales.com.mx
+                    </a>
                   </div>
                 </div>
 
@@ -157,7 +168,7 @@ const Contact = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   className="font-body"
-                  placeholder="(33) 1234-5678"
+                  placeholder="+52 (81) 1234-5678"
                 />
               </div>
 
