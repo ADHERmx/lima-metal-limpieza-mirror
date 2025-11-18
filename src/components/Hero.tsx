@@ -20,28 +20,24 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-industrial-dark/90 to-industrial-dark/70" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl">
+        <div className="flex flex-col items-center justify-center">
           {/* SEO-optimized logo with WebP + PNG fallback, larger size from server design */}
-          <div className="flex justify-center">
-            <picture>
-              <source srcSet={limaLogoWhiteWebP} type="image/webp" />
-              <img
-                src={limaLogoWhitePNG}
-                alt="LIMA - Limpieza de Metales"
-                className="h-72 md:h-96 lg:h-[28rem] w-auto mb-4 drop-shadow-2xl animate-[fade-in_1s_ease-out,scale-in_1s_ease-out]"
-                width="360"
-                height="144"
-              />
-            </picture>
-          </div>
+          <picture>
+            <source srcSet={limaLogoWhiteWebP} type="image/webp" />
+            <img
+              src={limaLogoWhitePNG}
+              alt="LIMA - Limpieza de Metales"
+              className="h-72 md:h-96 lg:h-[28rem] w-auto mb-4 drop-shadow-2xl animate-[fade-in_1s_ease-out,scale-in_1s_ease-out]"
+              width="360"
+              height="144"
+            />
+          </picture>
           <h1 className="sr-only">LIMA - Limpieza de Metales | Industria Metal Mecánica desde 1981</h1>
-          <div className="flex justify-center">
-            <div className="h-1 w-24 bg-accent mb-6" />
-          </div>
-          <p className="font-body text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed text-center">
+          <div className="h-1 w-24 bg-accent mb-6" />
+          <p className="font-body text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed text-center max-w-2xl animate-[fade-in_1.2s_ease-out,scale-in_1.2s_ease-out]">
             Dedicados a servir la industria metal mecánica y fundición desde 1981
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 animate-[fade-in_1.4s_ease-out,scale-in_1.4s_ease-out]">
             <button
               onClick={() =>
                 document.getElementById("nosotros")?.scrollIntoView({ behavior: "smooth" })
