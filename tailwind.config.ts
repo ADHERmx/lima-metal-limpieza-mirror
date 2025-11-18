@@ -14,8 +14,21 @@ export default {
     },
     extend: {
       fontFamily: {
-        'heading': ['Avenir', 'Avenir Next', 'system-ui', 'sans-serif'],
-        'body': ['Avenir', 'Avenir Next', 'system-ui', 'sans-serif'],
+        'heading': ['Inter', 'system-ui', 'sans-serif'],
+        'body': ['Montserrat', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        'h1': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '800' }],
+        'h1-mobile': ['2.5rem', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '800' }],
+        'h2': ['2.5rem', { lineHeight: '1.2', letterSpacing: '-0.01em', fontWeight: '700' }],
+        'h2-mobile': ['2rem', { lineHeight: '1.25', letterSpacing: '-0.01em', fontWeight: '700' }],
+        'h3': ['1.875rem', { lineHeight: '1.3', letterSpacing: '0', fontWeight: '700' }],
+        'h3-mobile': ['1.5rem', { lineHeight: '1.35', letterSpacing: '0', fontWeight: '700' }],
+        'subtitle': ['1.25rem', { lineHeight: '1.5', fontWeight: '600' }],
+        'body-lg': ['1.125rem', { lineHeight: '1.7', fontWeight: '400' }],
+        'body': ['1rem', { lineHeight: '1.7', fontWeight: '400' }],
+        'body-sm': ['0.875rem', { lineHeight: '1.6', fontWeight: '400' }],
+        'button': ['1rem', { lineHeight: '1.5', fontWeight: '600' }],
       },
       colors: {
         border: "hsl(var(--border))",
