@@ -87,7 +87,28 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+  }
+
+  /* Typography Hierarchy */
+  h1 {
+    @apply font-heading text-h1-mobile md:text-h1 tracking-tight;
+  }
+
+  h2 {
+    @apply font-heading text-h2-mobile md:text-h2 tracking-tight;
+  }
+
+  h3 {
+    @apply font-heading text-h3-mobile md:text-h3;
+  }
+
+  p {
+    @apply font-body text-body leading-relaxed;
+  }
+
+  button {
+    @apply font-body text-button;
   }
 
   /* Enhanced focus indicators for accessibility */
