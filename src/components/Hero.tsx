@@ -22,22 +22,26 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-3xl">
           {/* SEO-optimized logo with WebP + PNG fallback, larger size from server design */}
-          <picture>
-            <source srcSet={limaLogoWhiteWebP} type="image/webp" />
-            <img
-              src={limaLogoWhitePNG}
-              alt="LIMA - Limpieza de Metales"
-              className="h-48 md:h-64 lg:h-72 w-auto mb-4 drop-shadow-2xl animate-fade-in"
-              width="240"
-              height="96"
-            />
-          </picture>
+          <div className="flex justify-center">
+            <picture>
+              <source srcSet={limaLogoWhiteWebP} type="image/webp" />
+              <img
+                src={limaLogoWhitePNG}
+                alt="LIMA - Limpieza de Metales"
+                className="h-72 md:h-96 lg:h-[28rem] w-auto mb-4 drop-shadow-2xl animate-[fade-in_1s_ease-out,scale-in_1s_ease-out]"
+                width="360"
+                height="144"
+              />
+            </picture>
+          </div>
           <h1 className="sr-only">LIMA - Limpieza de Metales | Industria Metal Mecánica desde 1981</h1>
-          <div className="h-1 w-24 bg-accent mb-6" />
-          <p className="font-body text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
+          <div className="flex justify-center">
+            <div className="h-1 w-24 bg-accent mb-6" />
+          </div>
+          <p className="font-body text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed text-center">
             Dedicados a servir la industria metal mecánica y fundición desde 1981
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() =>
                 document.getElementById("nosotros")?.scrollIntoView({ behavior: "smooth" })
