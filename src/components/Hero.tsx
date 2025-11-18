@@ -5,7 +5,7 @@ import limaLogoWhitePNG from "@/assets/lima-logo-white-optimized.png";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden pb-20 md:pb-24 lg:pb-28">
       {/* SEO-optimized hero background with WebP + JPEG fallback */}
       <picture className="absolute inset-0">
         <source srcSet={heroImageWebP} type="image/webp" />
@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-industrial-dark/90 to-industrial-dark/70" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mt-8 md:mt-12">
           {/* SEO-optimized logo with WebP + PNG fallback, larger size from server design */}
           <picture>
             <source srcSet={limaLogoWhiteWebP} type="image/webp" />
