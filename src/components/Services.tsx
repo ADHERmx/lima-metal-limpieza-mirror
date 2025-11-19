@@ -49,7 +49,7 @@ const Services = () => {
         <>
           Transportadores de alimentadores y shakeouts{" "}
           <a
-            href="https://www.carrier-vibrating.com/"
+            href="https://carriervibrating.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-accent hover:underline"
