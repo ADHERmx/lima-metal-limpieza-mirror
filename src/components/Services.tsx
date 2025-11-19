@@ -49,7 +49,7 @@ const Services = () => {
         <>
           Transportadores de alimentadores y shakeouts{" "}
           <a
-            href="https://www.carrier-vibrating.com"
+            href="https://www.carrier-vibrating.com/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-accent hover:underline"
@@ -127,7 +127,7 @@ const Services = () => {
         <div className="mt-24">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Galería de Equipos Manufacturados por LIMA (1983-2008)
+              Galería de Equipos Manufacturados por LIMA
             </h2>
             <div className="h-1 w-24 bg-accent mx-auto" />
           </div>
