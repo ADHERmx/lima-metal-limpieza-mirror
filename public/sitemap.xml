@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <!-- Auto-generated 2025-11-12 from src/App.tsx routes -->
+  <!-- Auto-generated 2025-11-21 from src/App.tsx routes -->
 
   <url>
     <loc>https://limpiezademetales.com.mx/</loc>
-    <lastmod>2025-11-12</lastmod>
+    <lastmod>2025-11-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="es-MX" href="https://limpiezademetales.com.mx/" />
